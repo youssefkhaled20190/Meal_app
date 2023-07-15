@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Recipe</title>
+    <link rel="stylesheet" href="./meal.css">
+    <script src="./meal.js" defer></script>
+</head>
+<body>
+
+    <div class="header">
+        <ul>
+            <li><img src="./images/images-removebg-preview.png"></li>
+        </ul>
+    </div>
+
+    <div class="meal-search-box">
+        <input type="text" , placeholder="Search"  id="search-input">
+        <button type="submit" id="search-btn">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M10,18c1.846,0,3.543-0.635,4.897-1.688l4.396,4.396l1.414-1.414l-4.396-4.396C17.365,13.543,18,11.846,18,10 c0-4.411-3.589-8-8-8s-8,3.589-8,8S5.589,18,10,18z M10,4c3.309,0,6,2.691,6,6s-2.691,6-6,6s-6-2.691-6-6S6.691,4,10,4z"></path><path d="M11.412,8.586C11.791,8.966,12,9.468,12,10h2c0-1.065-0.416-2.069-1.174-2.828c-1.514-1.512-4.139-1.512-5.652,0 l1.412,1.416C9.346,7.83,10.656,7.832,11.412,8.586z"></path></svg>
+        </button>
+    </div>
+
+    <div class="meal-result">
+       <div id="meal">
+        <!-- <div class="meal-item">
+            <div class="meal-img">
+                <img  src="./images/disneys-ratatouille-ddmfs-4x3-0747-63a3c66850cb4f409ed40faae76d97b9.jpg">
+
+            </div>
+            <div class="meal-name">
+                <h3> this is meal name </h3>
+                <a href="#" onclick="Show_pup()"> get recipe</a>
+            </div>
+        </div> -->
+       </div>
+    </div>
+
+    <div class = "meal-details" id="pup">
+        <!-- meal content -->
+        <div class = "meal-details-content">
+          <h2 class = "recipe-title">Meals Name Here</h2>
+          <p class = "recipe-category">Category Name</p>
+          <div class = "recipe-instruct">
+            <h3>Instructions:</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo blanditiis quis accusantium natus! Porro, reiciendis maiores molestiae distinctio veniam ratione ex provident ipsa, soluta suscipit quam eos velit autem iste!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet aliquam voluptatibus ad obcaecati magnam, esse numquam nisi ut adipisci in?</p>
+          </div>
+          <div class = "recipe-meal-img">
+            <img src = "./images/disneys-ratatouille-ddmfs-4x3-0747-63a3c66850cb4f409ed40faae76d97b9.jpg" alt = "">
+          </div>
+          <div class = "recipe-link">
+            <a href = "#" target = "_blank">Watch Video</a>
+          </div>
+        </div>
+        <input type="button" value="close" onclick="Hide_pup()" class="btn_n">
+      </div>
+    
+</body>
+</html>
