@@ -13,16 +13,30 @@ const mealDetailsContent = document.querySelector(".meal-details-content");
 
 searchBtn.addEventListener('click', GetMealList);
 mealList.addEventListener('click' , GetmealRecipe);
+let html ="";
+
+html = `
+    <div class="not-found">
+        <ul>
+            <li><img src="./images/png-transparent-remy-ratatouille-mouse-removebg-preview.png"></li>
+            <li>What's up my friend , please enter a food name</li>
+        </ul>
+    </div>
+`;
+
+mealList.innerHTML=html;
+
 
 
 
 // featching all meal list
  function GetMealList(){
+    html=``;
     let searchInputtxt = document.getElementById("search-input").value.trim();
     fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${searchInputtxt}`)
     .then(response => response.json())
     .then(data =>{
-        let html ="";
+       
         if(data.meals){
             data.meals.forEach(meal => {
                 html += `
@@ -38,7 +52,7 @@ mealList.addEventListener('click' , GetmealRecipe);
                 `;    
             });
             mealList.classList.remove('not-found');
-        }else{
+        }else if(!data.meals){
             html = `
             <div class="not-found">
                 <ul>
@@ -53,6 +67,7 @@ mealList.addEventListener('click' , GetmealRecipe);
         }
         mealList.innerHTML = html;
     });
+  
  }
 
  function GetmealRecipe(e){
